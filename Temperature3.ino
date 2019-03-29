@@ -27,12 +27,12 @@
 #define LED_BUILTIN 2
 OneWire oneWire(ONE_WIRE_BUS);
 const char* server = "api.thingspeak.com";
-String apiKey ="QJMXH0QVZRQK84JV";
+String apiKey ="";
 // the setup function runs once when you press reset or power the board
 DallasTemperature sensors(&oneWire);
-//const char* MY_SSID = "AndroidHotspot3282"; 
-const char* MY_SSID = "iptime_dongseung"; 
-const char* MY_PWD = "reason9347";
+//const char* MY_SSID = ""; 
+const char* MY_SSID = ""; 
+const char* MY_PWD = "";
 const char* MY_EC2 = "ec2-52-43-66-45.us-west-2.compute.amazonaws.com";
 const char*port_num = "3000";
 int FLAG = 0;
