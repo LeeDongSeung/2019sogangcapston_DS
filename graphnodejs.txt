@@ -5,10 +5,10 @@ mysql = require('mysql');
 const moment = require('moment')
 var file = 'data.txt'
 var connection = mysql.createConnection({
-        host: 'localhost',
-        user: 'meto',
-        password: 'mypassword',
-        database: 'mydb'
+        host: '',
+        user: '',
+        password: '',
+        database: ''
 })
 connection.connect();
 function insert_sensor(value,time){
@@ -44,7 +44,7 @@ app.get('/data',function(req,res){
 app.get('/dump',function(req,res){
         var count = req.query.count
 //      res.send(JSON.stringify(req.query))
-        //count��ŭ �ֽŰ� ����ϱ�
+        //count¸¸Å­ ÃÖ½Å°Å Ãâ·ÂÇÏ±â
 //      res.send(String(count));
         var data = fs.readFileSync('data.txt','utf8');
 //      res.send(String(data.length));
