@@ -8,25 +8,14 @@ var list = {}
 var input ='input.txt'
 var hostinput = "",userinput = ""
 var passwordinput ="",databaseinput=""
+var user = require('./user')
 
-fs.readFile('input.txt','utf8',function(err,data){
-        if(err)throw err
-        list = data.split('\n')
-        userinput = list[1]
-        hostinput = list[0]
-        passwordinput = list[2]
-        databaseinput = list[3]
-        console.log(list[0])
-        console.log(list[1])
-        console.log(list[2])
-        console.log(list[3])
-})
 
 var connection = mysql.createConnection({
-        host:list[0],
-        user:list[1],
-        password:list[2],
-        database:list[3]
+        host:user.host,
+        user:user.user,
+        password:user.password,
+        database:user.database
 })
 
 connection.connect();
